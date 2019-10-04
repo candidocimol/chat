@@ -1,5 +1,11 @@
 <!doctype html>
 <html>
+	<!--
+	Este projeto é um simples aplicativo de troca de mensagens, 
+	utilizando como front end bootstrap e Jquery, 
+	e como back end um servidor PHP com banco de dados MySQL.
+	Projeto apresentado como exemplo nas aulas de criação de site do CIMOL
+	  -->
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="UTF-8" />
@@ -12,6 +18,7 @@
 	<body>
 
 		<main >
+			<!-- Cabeçalho exibido em toda o aplicativo  -->
 			<div class="card text-white bg-info mb-3 ">
 			  <div class="card-header" style="margin:0 auto">Chat</div>
 			  <div class="card-body" style="margin:0 auto">
@@ -19,6 +26,7 @@
 			    <p class="card-text">Este é um simples aplicativo de troca de mensagens.</p>
 			  </div>
 			</div>
+			<!-- Tela de entrada, onde o usuário informa apelido utilizado nas conversas -->
 			<div id="input-chat" class="row container">
 				<div style="margin:0 auto">
 					<div class="form-row align-items-center">
@@ -32,7 +40,7 @@
 					</div>
 				</div>
 			</div>
-
+			<!-- Tela de mensagens -->
 			<div id="msg-chat" class="row container" >
 				<div class="alert alert-secondary" role="alert" id="nick-show" style="margin:0 auto">
 					
