@@ -47,6 +47,7 @@ $(document).ready(function(){
    });
 
    function updateMessages(){
+     		console.log(timestamp);
      		$.ajax({
 	          url : "getMessage.php",
 	          type : 'post',
@@ -64,7 +65,7 @@ $(document).ready(function(){
 	          		console.log(messages[i]);
 	          		str="<p>"+messages[i].nick+" diz: "+messages[i].message+"</p>";
 	          		$("#msg-show").append(str);
-	          		timestemp=messages[i].timestemp;
+	          		timestamp=messages[i].timestamp;
 	          	}
 	          	
 	          }
