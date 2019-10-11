@@ -20,12 +20,13 @@ USE `chat` ;
 -- -----------------------------------------------------
 -- Table `chat`.`mesage`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `chat`.`mesage` (
+CREATE TABLE IF NOT EXISTS `chat`.`message` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `from` VARCHAR(30) NOT NULL,
-  `timestamp` TIMESTAMP NOT NULL,
+  `message` VARCHAR(90) NOT NULL,
+  `nick` VARCHAR(30) NOT NULL,
+  `timestamp` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE)
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC))
 ENGINE = InnoDB;
 
 

@@ -12,7 +12,7 @@ $(document).ready(function(){
    			$("#input-chat").css("display", "none");
    			$("#msg-chat").css("display", "block");
    			$("#nick-show").html(nick);
-   			$("#chat-msg-from").val(nick);
+   			$("#chat-msg-nick").val(nick);
    		}
 
    		$("#btn-send-msg").click(function(){
@@ -20,16 +20,18 @@ $(document).ready(function(){
 	          url : "postMessage.php",
 	          type : 'post',
 	          data : {
-	               from : $("#chat-msg-from").val(),
+	               nick : $("#chat-msg-nick").val(),
 	               message :$("#chat-msg").val()
 	          },
 	          beforeSend : function(){
 	              // $("#resultado").html("ENVIANDO...");
+	              
 	          }
 	     	}).done(function(resultado){
+	          
 	          if(resultado !=null){
 	          	
-	          	
+	          	console.log("Atualizando");
 	          	updateMessages();
 	          }
 	     	}).fail(function(jqXHR, textStatus, msg){
@@ -60,7 +62,7 @@ $(document).ready(function(){
 
 	          	for(i=0; i<messages.length;i++){
 	          		console.log(messages[i]);
-	          		str="<p>"+messages[i].from+" diz: "+messages[i].message+"</p>";
+	          		str="<p>"+messages[i].nick+" diz: "+messages[i].message+"</p>";
 	          		$("#msg-show").append(str);
 	          		timestemp=messages[i].timestemp;
 	          	}
