@@ -3,18 +3,11 @@ include "Conexao.php";
 
 	$con=Conexao::getConexao();
 	
-
 	if(!empty($_POST['timestamp'])) 
 		$sql="SELECT * FROM  message WHERE timestamp>".$_POST['timestamp'];
 	else
 		$sql="SELECT * FROM  message";
-		
-		
-
-
-	$timestamp;
-
-
+	
 	if($resultado=$con->query($sql)){
 		
 		$messages=null;
